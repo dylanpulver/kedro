@@ -443,7 +443,8 @@ class TestAbstractDataset:
                 load_version=None,
                 save_version=None,
             )
-            assert "must only contain arguments valid" in str(exc_info.value)
+
+        assert "must only contain arguments valid" in str(exc_info.value)
 
     def test_from_config_abstract_dataset_type_error(self, mocker):
         mocker.patch(
@@ -486,7 +487,8 @@ class TestAbstractDataset:
                 load_version=None,
                 save_version=None,
             )
-            assert "Failed to instantiate dataset" in str(exc_info.value)
+
+        assert "Failed to instantiate dataset" in str(exc_info.value)
 
     def test_exists_exception_handling(self, mocker):
         """Test that exists() properly handles exceptions from _exists()."""
